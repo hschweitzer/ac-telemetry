@@ -1,0 +1,105 @@
+@import url('https://fonts.cdnfonts.com/css/digital-7-mono');
+
+html {
+    --bg-color: #a89d8a;
+    --font-color: #0b0a09;
+    --font-color-inactive: #908675;
+}
+
+body {
+    margin: 0;
+    padding-bottom: 3rem;
+    font-family: 'Digital-7 Mono', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+.gauge-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.gauge-container.h1 {
+    text-align: right;
+    /* width: 100%; */
+}
+
+.gauge-container .gauge-unit {
+    font-size: 4rem;
+    padding-left: 1rem;
+    text-align: left;
+}
+
+.gauge-container .gauge-value {
+    /* position: relative; */
+    text-align: right;
+}
+
+.gauge-container .gauge-value,
+.gauge-container .gauge-unit {
+    width: 50%;
+}
+
+.inactive-placeholder {
+    transform-style: preserve-3d;
+}
+
+.inactive-placeholder::before {
+    color: var(--font-color-inactive);
+    position: absolute;
+    right: 0;
+    transform: translateZ(-1px);
+}
+
+.inactive-placeholder#engine_rpm::before {
+    content: "88888";
+}
+
+.inactive-placeholder#speed::before {
+    content: "888";
+}
+
+.inactive-placeholder#gear::before {
+    right: auto;
+    content: "8";
+}
+
+.inactive-placeholder#acc_g_frontal::before {
+    content: "-88.8";
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.h1,
+.h2 {
+    margin: 0;
+}
+
+.h1 {
+    min-width: 50rem;
+    text-align: center;
+}
+
+.h2 {
+    min-width: 20rem;
+    text-align: center;
+}
+
+.assistance-inactive {
+    color: var(--font-color-inactive);
+}
+
+.h1 {
+    font-size: 7rem;
+}
+
+.h2 {
+    font-size: 4rem;
+}

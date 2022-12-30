@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assetto Corsa Telemetry</title>
+    <link rel="stylesheet" href="styles/app.css">
+</head>
+
+<body>
+    <div class="gauge-container h1">
+        <div class="gauge-value inactive-placeholder" id="engine_rpm">-----</div>
+        <div class="gauge-unit">T/MIN</div>
+    </div>
+    <div class="h1">
+        <div id="gear" class="inactive-placeholder">-</div>
+    </div>
+    <div class="gauge-container h1">
+        <div class="gauge-value inactive-placeholder" id="speed">---</div>
+        <div class="gauge-unit">KM/H</div>
+    </div>
+    <div class="container">
+        <div class="h2"><span id="tc" class="assistance-inactive">TC</span></div>
+        <div class="h2 gauge-container">
+            <div class="gauge-value inactive-placeholder" id="acc_g_frontal">----</div>
+            <div class="gauge-unit">G</div>
+        </div>
+        <div class="h2"><span id="abs" class="assistance-inactive">ABS</span></div>
+    </div>
+
+    <script src="scripts/socketClient.js" type="module"></script>
+</body>
+
+</html>
